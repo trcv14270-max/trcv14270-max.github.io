@@ -1,0 +1,760 @@
+img {
+    width: 100%;
+}
+
+body {
+    background-color: #d8d8d6;
+    /* Дорогий світло-сірий відтінок з теплим підтоном */
+    background-image:
+        radial-gradient(at 0% 0%, rgba(24cf, 246, 242, 1) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(235, 230, 224, 0.79) 0px, transparent 50%);
+    /* М'яке дизайнерське підсвічування по кутах */
+    color: #2c2c2c;
+    /* М'який графітовий колір тексту замість грубого чорного */
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px 0;
+    -webkit-font-smoothing: antialiased;
+    /* Робить шрифти чіткішими та гладкими */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+    height: 70vh;
+    background: url(2-1.jpg), #7e7e7e;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+
+.logo-name {
+    color: rgb(253, 254, 255);
+    font-size: 3em;
+    font-family: "Comfortaa", sans-serif;
+}
+
+.logo-2,
+.logo-3 {
+    font-family: "Montserrat", sans-serif;
+    padding-left: 30px;
+    color: rgb(229, 229, 229);
+    font-size: 1.5em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* .card {
+    background-color: #c4c4c2;
+}
+
+.card-header {
+    background-color: #e9e4e4;
+    font-size: 1.5em;
+    font-family: "Cormorant Garamond", serif;
+    text-align: center;
+}
+
+.card-left,
+.card-right {
+    width: 50%;
+}
+
+.card-img-wrap {
+    display: flex;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+
+} */
+
+
+/* Основна картка в стилі Neo-Luxury */
+.card {
+    background: #d5aead;
+    /* Глибокий графітовий фон, на якому блонди та кольори "горять" */
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    /* Тонка золота рамка */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+}
+
+/* Ефектний спалах та підйом картки при наведенні */
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #61605a;
+    /* Чисте золото */
+    box-shadow: 0 15px 35px #61605a;
+}
+
+/* Розкішна шапка з виразним шрифтом */
+.card-header {
+    background: linear-gradient #d5aead;
+    border-bottom: 2px solid #531f1fda;
+    /* Золота лінія-розділювач */
+    font-size: 1.8rem;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 1.2rem;
+    color: #531f1fda;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Контейнер для фотографій */
+.card-img-wrap {
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    background-color: #d5aead;
+    padding: 20px;
+    gap: 16px;
+    /* Виразний відступ між фото */
+}
+
+/* Колонки "До" та "Після" */
+.card-left,
+.card-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Виразні підписи-бейджи */
+.card-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding: 4px 14px;
+    border-radius: 20px;
+}
+
+/* Стиль бейджа "ДО" (стриманий) */
+.card-left .card-title {
+    background: #a59695fe;
+    color: #531f1fda;
+}
+
+/* Стиль бейджа "ПІСЛЯ" (акцентний золото-глянець) */
+.card-right .card-title {
+    background: #a59695fe;
+    color: #531f1fda;
+    box-shadow: 0 2px 10px #5d5c5a66;
+}
+
+/* Глянцеві, соковиті зображення */
+.card-left img,
+.card-right img {
+    width: 100%;
+    height: 280px;
+    /* Трохи збільшена висота для кращого фокусу на деталях волосся */
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #4b4747cc;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Ефект фокусу на результаті "Після" */
+.card:hover .card-right img {
+    transform: scale(1.02);
+    /* Легке наближення фото "Після" при наведенні */
+}
+
+.card:hover .card-left img {
+    filter: grayscale(30%);
+    /* Фото "До" злегка втрачає колір, щоб виділити результат */
+}
+
+/* -------------------- */
+
+.my-name {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 900;
+    font-size: 1.3em;
+    line-height: 1.8;
+
+}
+
+/* Контейнер прайсу */
+.portfolio-prices-wrap {
+    background: #d6bfbfdd !important;
+    /* Глибокий графіт */
+    border: 1px solid rgba(73, 69, 69, 0.433) !important;
+    border-radius: 20px !important;
+    padding: 40px 30px !important;
+    box-shadow: 0 15px 40px rgba(68, 64, 64, 0.5) !important;
+    margin: 40px 0 !important;
+}
+
+/* Головний заголовок "Price-list" розкішним розчерком пера */
+.prices-title {
+    font-family: 'Great Vibes', cursive !important;
+    color: #531f1fda !important;
+    /* Золото */
+    font-size: 4rem !important;
+    /* Великий розмір для рукописного шрифту */
+    font-weight: 400 !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+}
+
+/* Базова таблиця */
+.custom-price-table {
+    width: 100% !important;
+    color: #531f1fda !important;
+    border-collapse: collapse !important;
+}
+
+/* Назви категорій (Стрижки, Фарбування) СПРАВЖНІМ ПИСЬМОВИМ ПОЧЕРКОМ */
+.custom-price-table thead th {
+       font-family: 'Montserrat', sans-serif !important;
+
+    /* Живий рукописний шрифт */
+    font-size: 2.2rem !important;
+    /* Рукописні шрифти зазвичай менші, тому збільшуємо розмір */
+    font-weight: 700 !important;
+    color: #531f1fda !important;
+    /* Золотий акцент */
+    padding: 25px 10px 5px 10px !important;
+    border-bottom: 2px solid #531f1fda !important;
+    background: transparent !important;
+    text-transform: none !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Вирівнювання слова "Ціна" праворуч (залишаємо рівним для балансу) */
+.custom-price-table thead th.price-header {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    color: #531f1fda !important;
+    letter-spacing: 2px !important;
+    vertical-align: bottom !important;
+    text-align: right !important;
+    padding-bottom: 12px !important;
+}
+
+/* Додатковий відступ для другої категорії (Фарбування) */
+.custom-price-table thead:nth-of-type(2) th {
+    padding-top: 50px !important;
+}
+
+/* Текст самих послуг (чистий та легкий для читання) */
+.custom-price-table tbody td {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1rem !important;
+    color: #531f1fda !important;
+    padding: 16px 10px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+    background: transparent !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Акуратний зсув послуг праворуч під рукописний заголовок */
+.custom-price-table tbody td:first-child {
+    padding-left: 20px !important;
+}
+
+/* Чіткі золоті ціни */
+.custom-price-table .price-value {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+    color: #531f1fda !important;
+    text-align: right !important;
+    font-size: 1.05rem !important;
+}
+
+/* Підсвічування рядка при наведенні курсору */
+.custom-price-table tbody tr:hover td {
+    background-color: rgba(185, 129, 129, 0.514) !important;
+    color: #531f1fda !important;
+}
+
+/* Прибираємо нижню лінію в кінці списків */
+.custom-price-table tbody tr:last-child td {
+    border-bottom: none !important;
+}
+
+/* Контейнер верхньої панелі з ефектом скла */
+.custom-navbar {
+    background: #d5aead !important;
+    /* Напівпрозорий графіт */
+    backdrop-filter: blur(10px);
+    /* Ефект розмиття заднього фону */
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid #d5aead;
+    padding: 12px 0 !important;
+    /* Компактна висота */
+    transition: all 0.3s ease;
+}
+
+/* Стиль логотипу (Ім'я) — витончений курсив */
+.navbar-brand-custom {
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #531f1fda !important;
+    text-decoration: none;
+}
+
+.navbar-brand-custom span {
+    color: #531f1fda;
+    /* Золота крапка в кінці імені */
+}
+
+/* Посилання в меню (акуратний Montserrat) */
+.nav-link-custom {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.9rem !important;
+    font-weight: 500;
+    color: #531f1fda !important;
+    text-decoration: none;
+    padding: 8px 15px !important;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Ефект наведення на посилання (плавна золота лінія знизу) */
+.nav-link-custom::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: 2px;
+    left: 15px;
+    background-color: #531f1fda;
+    transition: width 0.3s ease;
+}
+
+.nav-link-custom:hover::after,
+.nav-link-custom.active::after {
+    width: calc(100% - 30px);
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+    color: #531f1fda !important;
+}
+
+/* Компактна золота кнопка запису */
+.nav-btn-book {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.85rem !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #531f1fda !important;
+    background-color: #d6bfbfdd;
+    /* Золотий фон */
+    padding: 8px 20px !important;
+    border-radius: 6px;
+    text-decoration: none !important;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.nav-btn-book:hover {
+    background-color: #ffffff;
+    /* При наведенні стає білою */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px #ba9b9bf5;
+}
+
+/* Кастомізація мобільної кнопки-гамбургера (підганяємо під темний стиль) */
+.navbar-toggler {
+    border: none !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.toggler-icon {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #531f1fda;
+    transition: all 0.3s ease;
+}
+
+
+
+/* Контейнер блоку "Про мене" */
+.portfolio-about {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #2c2c2c;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    max-width: 650px;
+}
+
+/* Коротке вітання */
+.portfolio-about .greeting {
+    font-size: 1.3rem;
+    color: #cca483;
+    /* М'який карамельно-золотий відтінок */
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Головний заголовок з ім'ям */
+.portfolio-about .my-name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #111111;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+
+/* Заголовок списку послуг */
+.portfolio-about .specialty-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #111111;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Стилізація нумерованого списку */
+.portfolio-about .services-list {
+    list-style: none;
+    /* Прибираємо стандартні цифри browser */
+    counter-reset: custom-counter;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+
+.portfolio-about .services-list li {
+    counter-increment: custom-counter;
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 0.7rem;
+    font-weight: 450;
+}
+
+/* Нумерація виду 01, 02, 03... */
+.portfolio-about .services-list li::before {
+    content: "0" counter(custom-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #cca483;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Красива рамка для адреси */
+.portfolio-about .address-block {
+    margin-top: 2.5rem;
+    padding: 1rem 1.5rem;
+    background-color: #faf6f2;
+    /* Легкий теплий фон */
+    border-left: 3px solid #cca483;
+    /* Елегантна лінія зліва */
+    border-radius: 0 8px 8px 0;
+    display: inline-block;
+}
+
+/* Адаптивність для мобільних екранів */
+@media (max-width: 768px) {
+    .portfolio-about .my-name {
+        font-size: 1.8rem;
+    }
+
+    .portfolio-about {
+        font-size: 1rem;
+    }
+}
+
+/* підвал */
+
+
+/* Картка контактів */
+.contacts-info-card {
+    background: #1a1a1a !important;
+    /* Наш фірмовий графіт */
+    border: 1px solid rgba(212, 175, 55, 0.15) !important;
+    border-radius: 12px !important;
+    padding: 30px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Заголовки всередині контактної карти */
+.contacts-card-title {
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic !important;
+    /* Наш фірмовий акуратний нахил */
+    color: #d4af37 !important;
+    /* Золото */
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 15px !important;
+}
+
+/* Елементи контактів */
+.contact-item,
+.work-time {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.9rem !important;
+    color: #cccccc !important;
+    margin-bottom: 10px !important;
+}
+
+.contact-item i {
+    color: #d4af37 !important;
+    margin-right: 6px;
+}
+
+.contact-item a {
+    color: #cccccc !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #ffffff !important;
+}
+
+/* Вихідний день */
+.text-muted-gold {
+    color: rgba(212, 175, 55, 0.5) !important;
+}
+
+/* Маленький статус-бейдж */
+.badge-status {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.75rem !important;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 4px 10px;
+    border-radius: 20px;
+    color: #e0e0e0;
+    margin-top: 5px;
+}
+
+.dot-online {
+    width: 6px;
+    height: 6px;
+    background-color: #d4af37;
+    /* Золота точка пульсації */
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+/* Соцмережі в блоці контактів */
+.contact-socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.contact-socials a {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.05);
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none !important;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.contact-socials a:hover {
+    background: #d4af37;
+    color: #000000 !important;
+    transform: translateY(-2px);
+}
+
+/* Б'юті-цитата ("Щось цікаве") */
+.beauty-quote {
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    color: #e0e0e0 !important;
+    border-left: 2px solid rgba(212, 175, 55, 0.3);
+    padding-left: 15px;
+    margin-bottom: 0 !important;
+}
+
+/* Елегантне обрамлення для карти */
+.map-container-wrap {
+    border: 1px solid rgba(212, 175, 55, 0.15) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Робимо карту трохи темнішою у стилі сайту через CSS фільтр */
+.map-container-wrap iframe {
+    filter: grayscale(20%) invert(90%) hue-rotate(180deg) opacity(0.85);
+    /* Ефект стильної нічної карти під графіт */
+    transition: filter 0.5s ease;
+}
+
+.map-container-wrap:hover iframe {
+    filter: none;
+    /* При наведенні карта стає звичайною кольоровою */
+}
+
+
+/* -------------------------- */
+
+
+/* Картка контактів (Зліва) */
+.contacts-info-card {
+    background: #d5aead !important;
+    /* Наш графіт */
+    border: 1px solid #d4af3726 !important;
+    border-radius: 12px !important;
+    padding: 35px 30px !important;
+    box-shadow: 0 10px 30px #00000066 !important;
+}
+
+/* Заголовки */
+.contacts-card-title {
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic !important;
+    color: #531f1fda !important;
+    /* Золото */
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 12px !important;
+}
+
+/* Тексти */
+.contact-item,
+.work-time {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.9rem !important;
+    color: #531f1fda !important;
+    margin-bottom: 8px !important;
+}
+
+.contact-item i {
+    color: #531f1fda !important;
+    margin-right: 8px;
+}
+
+.contact-item a {
+    color: #531f1fda !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #531f1fda !important;
+}
+
+.text-muted-gold {
+    color: #531f1fda !important;
+}
+
+/* Статус-бедж */
+.badge-status {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.75rem !important;
+    background: #b59291;
+    padding: 4px 12px;
+    border-radius: 20px;
+    color: #531f1fda;
+    margin-top: 4px;
+}
+
+.dot-online {
+    width: 6px;
+    height: 6px;
+    background-color: #531f1fda;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+/* Соцмережі */
+.contact-socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.contact-socials a {
+    color: #531f1fda !important;
+    background: #d5aead;
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none !important;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.contact-socials a:hover {
+    background: #531f1fda;
+    color: #000000 !important;
+    transform: translateY(-2px);
+}
+
+/* Цитата */
+.beauty-quote {
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    color: #531f1fda !important;
+    border-left: 2px solid #d5aead;
+    padding-left: 15px;
+    margin-bottom: 0 !important;
+}
+
+/* Обгортка карти (Справа) */
+.map-container-wrap {
+    border: 1px solid #d4af3726 !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px #000000 !important;
+}
+
+/* Стильний темний фільтр для карти */
+.map-container-wrap iframe {
+    filter: grayscale(20%) invert(90%) hue-rotate(180deg) opacity(0.85);
+    transition: filter 0.5s ease;
+}
+
+.map-container-wrap:hover iframe {
+    filter: none;
+    /* При наведенні карта стає кольоровою */
+}
+
+/* Адаптивність під мобільні екрани */
+@media (max-width: 767.98px) {
+    .map-container-wrap iframe {
+        min-height: 300px !important;
+        /* На смартфонах карту робимо трохи нижчою */
+    }
+}
